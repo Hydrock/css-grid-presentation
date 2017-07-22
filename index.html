@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/monokai-sublime.css">
+  <style>
+    .img-1 {
+      width: 600px;
+      height: 300px;
+    }
+
+    .img-2 {
+      width: 600px;
+      height: 500px;
+    }
+
+    .white-wrap {
+      display: inline-block;
+      background-color: #fff;
+    }
+
+    .img-3 {
+      width: 380px;
+      height: 220px;
+    }
+
+    .img-4 {
+      width: 680px;
+      height: 420px;
+    }
+
+    .img-5 {
+      width: 680px;
+      height: 420px;
+    }
+    .img-6 {
+      width: 600px;
+      height: 420px;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>CSS Grid Layout</h1>
+        <h4>Just learn it</h4>
+      </section>
+      <section>
+        <h4>Немного истории</h4>
+      </section>
+      <section>
+        <p>Появился - Hypertext Markup Language (HTML) - для разметки</p>
+        <iframe src="https://www.w3.org/" frameborder="0" width="800" height="400"></iframe>
+      </section>
+      <section>
+        <p>Стилями - Cascading Style Sheets (CSS) - решили все украшать</p>
+        <img src="assets/img/html-css.jpg" class="img-1" alt="html with css">
+      </section>
+      <section>
+        <p>Ожидание...</p>
+        <iframe src="https://giphy.com/embed/l0ExuIDg1BtG0QojC" width="480" height="268" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      </section>
+      <section>
+        <p>Реальность...</p>
+        <iframe src="https://giphy.com/embed/xT9KVyYLT8SZdtsUDu" width="480" height="325" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      </section>
+      <section>
+        <p>Технолигии не предназначались для этого...</p>
+        <p>Мы использовали гразные хаки...</p>
+        <iframe src="https://giphy.com/embed/MGaacoiAlAti0" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      </section>
+      <section>
+        <p>Но потом появился flexbox</p>
+        <p>Жить стало легче</p>
+        <iframe src="https://giphy.com/embed/GWQaZxpswgXT2" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      </section>
+      <section>
+        <p>Зачем тогда нам Grid System</p>
+        <p>Чего не дает FlexBox?</p>
+      </section>
+      <section>
+        <p>FlexBox работает в полтора измерения</p>
+        <iframe src="https://giphy.com/embed/wViS9n0RqN2" width="480" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p>
+      </section>
+      <section>
+        <p>Первое впечатление от Grid-ов</p>
+        <img src="assets/img/np_A321-ped.jpg" class="img-2" alt="html with css">
+      </section>
+      <section>
+        <p>Список всех новых свойств</p>
+        <pre>
+          <code data-trim data-noescape class="css hljs">
+          <mark>For-containers:</mark>
+
+          display
+          grid-template-columns
+          grid-template-rows
+          grid-template-areas
+          grid-template
+          grid-column-gap
+          grid-row-gap
+          grid-gap
+          justify-items
+          align-items
+          justify-content
+          align-content
+          grid-auto-columns
+          grid-auto-rows
+          grid-auto-flow
+          grid
+
+          <mark>For items:</mark>
+
+          grid-column-start
+          grid-column-end
+          grid-row-start
+          grid-row-end
+          grid-column
+          grid-row
+          grid-area
+          justify-self
+          align-self
+          </code>
+        </pre>
+      </section>
+      <section data-background-color="#fff">
+        <section>
+          <h5>Терминология</h5>
+        </section>
+        <section>
+          <p>Grid Container</p>
+          <p>Grid Item</p>
+            <pre>
+              <code>
+                <div class="container">
+                  <div class="item item-1"></div>
+                  <div class="item item-2"></div>
+                  <div class="item item-3"></div>
+                </div>
+              </code>
+            </pre>
+        </section>
+        <section>
+          <p>Grid Line</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-line.png" class="img-3" alt="html with css">
+          </div>
+        </section>
+        <section>
+          <p>Grid Track</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-track.png" class="img-3" alt="html with css">
+          </div>
+        </section>
+        <section>
+          <p>Grid Cell</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-cell.png" class="img-3" alt="html with css">
+          </div>
+        </section>
+        <section>
+          <p>Grid Area</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-area.png" class="img-3" alt="html with css">
+          </div>
+        </section>
+      </section>
+      <section>
+        <iframe width="100%" height="600" src="https://jsfiddle.net/Hydrock/rhnumnd0/6/embedded/html,css,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      </section>
+      <section>
+        <iframe width="100%" height="600" src="https://jsfiddle.net/Hydrock/3j51dp2f/4/embedded/css,html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      </section>
+      <section>
+        <p>Колонки и Ряды</p>
+        <iframe width="100%" height="500" src="https://jsfiddle.net/Hydrock/3j51dp2f/19/embedded/css,html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      </section>
+      <section>
+        <p>Fr</p>
+        <iframe width="100%" height="500" src="https://jsfiddle.net/Hydrock/3j51dp2f/21/embedded/css,html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      </section>
+      <section>
+        <iframe width="100%" height="600" src="https://jsfiddle.net/Hydrock/3j51dp2f/22/embedded/css,html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      </section>
+      <section>
+        <iframe width="100%" height="600" src="https://jsfiddle.net/Hydrock/3j51dp2f/23/embedded/css,html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      </section>
+      <section>
+        <div class="white-wrap">
+          <img src="assets/img/grid-numbers.png" class="img-4" alt="html with css">
+        </div>
+      </section>
+      <section>
+        <p>Наименования</p>
+        <iframe width="100%" height="500" src="https://jsfiddle.net/Hydrock/3j51dp2f/24/embedded/css,html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      </section>
+      <section>
+        <p>Повторение</p>
+        <iframe width="100%" height="500" src="https://jsfiddle.net/Hydrock/3j51dp2f/26/embedded/css,html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      </section>
+      <section>
+        <p>Зоны - Areas</p>
+        <iframe width="100%" height="500" src="https://jsfiddle.net/Hydrock/3j51dp2f/31/embedded/css,html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      </section>
+      <section>
+        <iframe width="100%" height="600" src="https://jsfiddle.net/Hydrock/3j51dp2f/32/embedded/css,html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      </section>
+      <section>
+        <p>grid-template</p>
+        <iframe width="100%" height="500" src="https://jsfiddle.net/Hydrock/3j51dp2f/35/embedded/css,html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      </section>
+      <section>
+        <p>grid-column-gap, grid-row-gap</p>
+        <iframe width="100%" height="500" src="https://jsfiddle.net/Hydrock/3j51dp2f/36/embedded/css,html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      </section>
+      <section>
+        <p>grid-gap</p>
+        <iframe width="100%" height="500" src="https://jsfiddle.net/Hydrock/3j51dp2f/38/embedded/css,html,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+      </section>
+      <section>
+        <p>Устали? Это только начало!</p>
+        <iframe src="https://giphy.com/embed/bEs40jYsdQjmM" width="480" height="442" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      </section>
+      <section>
+        <section>
+          <p>justify-content</p>
+          <p>start, end, center, stretch, space-around, space-between, space-evenly</p>
+        </section>
+        <section>
+          <p>justify-content: start;</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-justify-content-start.png" class="img-5" alt="html with css">
+          </div>
+        </section>
+        <section>
+          <p>justify-content: end;</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-justify-content-end.png" class="img-5" alt="html with css">
+          </div>
+        </section>
+        <section>
+          <p>justify-content: center;</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-justify-content-center.png" class="img-5" alt="html with css">
+          </div>
+        </section>
+        <section>
+          <p>justify-content: stretch;</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-justify-content-stretch.png" class="img-5" alt="html with css">
+          </div>
+        </section>
+        <section>
+          <p>justify-content: space-around;</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-justify-content-space-around.png" class="img-5" alt="html with css">
+          </div>
+        </section>
+        <section>
+          <p>justify-content: space-between;</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-justify-content-space-between.png" class="img-5" alt="html with css">
+          </div>
+        </section>
+        <section>
+          <p>justify-content: space-evenly;</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-justify-content-space-evenly.png" class="img-5" alt="html with css">
+          </div>
+        </section>
+      </section>
+      <section>
+        <section>
+          <p>align-content</p>
+          <p>start, end, center, stretch, space-around, space-between, space-evenly</p>
+        </section>
+        <section>
+          <p>align-content: start;</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-align-content-start.png" class="img-6" alt="html with css">
+          </div>
+        </section>
+        <section>
+          <p>align-content: end;</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-align-content-end.png" class="img-6" alt="html with css">
+          </div>
+        </section>
+        <section>
+          <p>align-content: center;</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-align-content-center.png" class="img-6" alt="html with css">
+          </div>
+        </section>
+        <section>
+          <p>align-content: stretch;</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-align-content-stretch.png" class="img-6" alt="html with css">
+          </div>
+        </section>
+        <section>
+          <p>align-content: space-around;</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-align-content-space-around.png" class="img-6" alt="html with css">
+          </div>
+        </section>
+        <section>
+          <p>align-content: space-between;</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-align-content-space-between.png" class="img-6" alt="html with css">
+          </div>
+        </section>
+        <section>
+          <p>align-content: space-evenly;</p>
+          <div class="white-wrap">
+            <img src="assets/img/grid-align-content-space-evenly.png" class="img-6" alt="html with css">
+          </div>
+        </section>
+      </section>
+    </div>
+  </div>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      history: true,
+      dependencies: [
+        { src: 'plugin/markdown/marked.js' },
+        { src: 'plugin/markdown/markdown.js' },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+      ]
+    });
+  </script>
+</body>
+</html>
