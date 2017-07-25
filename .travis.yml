@@ -1,6 +1,6 @@
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: 2cc44d2841d893f73fba6664d3dab153fd897f17
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   on:
     branch: master
